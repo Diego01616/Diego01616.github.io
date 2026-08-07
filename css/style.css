@@ -90,11 +90,10 @@ body {
 
 .hero {
     height: 100vh;
-    background: url("../img/Fondo.png");
+    background-image: url("../img/fondo.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
     display: flex;
     align-items: center;
     position: relative;
@@ -540,10 +539,10 @@ h2 {
         color: #fce7ff !important;
     }
 
-
     /* HERO */
     .hero {
         min-height: 100vh;
+        background-image: url("../img/fondo-9-16.png");
         padding: 120px 20px 70px;
         background-position: center;
     }
@@ -563,7 +562,7 @@ h2 {
     }
 
     .lavender-icon {
-        width: 22px;
+        width: 30px;
         height: auto;
     }
 
