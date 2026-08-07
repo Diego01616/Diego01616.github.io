@@ -83,6 +83,7 @@ body {
     color: var(--text-gold) !important;
     transition: .3s
 }
+
 /*==========================================
                 HERO
 ==========================================*/
@@ -102,14 +103,14 @@ body {
 .overlay {
     position: absolute;
     inset: 0;
-    
+
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    
+
     /* Mantiene un contexto de capas limpio */
-    z-index: 1; 
+    z-index: 1;
 }
 
 /* AQUÍ SE APLICA LA OPACIDAD SOLO AL LOGO */
@@ -117,22 +118,24 @@ body {
     content: "";
     position: absolute;
     inset: 0;
-    
+
     background-image: url("../icon/logo-principal.svg");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain; /* O cover según el tamaño que busques */
+    background-size: contain;
+    /* O cover según el tamaño que busques */
     /* AJUSTA LA OPACIDAD AQUÍ (De 0.0 a 1.0) */
-    opacity: 0.1    ; 
+    opacity: 0.1;
     /* Mantiene el logo detrás del texto */
-    z-index: -1; 
+    z-index: -1;
 }
 
 
 
 .hero-subtitle {
     font-family: "Manrope", sans-serif;
-    font-weight: 800; /* o 700 */
+    font-weight: 800;
+    /* o 700 */
     letter-spacing: 8px;
     text-transform: uppercase;
     color: #C89B2B;
@@ -169,7 +172,7 @@ body {
 }
 
 .btn-purple:hover {
-     background: var(--text-gold-light);
+    background: var(--text-gold-light);
     color: var(--p);
     font-weight: bold;
     transform: translateY(-5px) scale(1.15);
@@ -209,51 +212,54 @@ body {
     color: var(--p);
     font-size: 24px;
 }
-.values-section{
-    padding:100px 0;
+
+.values-section {
+    padding: 100px 0;
 }
 
-.value-card{
-    height:100%;
-    padding:35px;
-    border:1px solid #ececec;
-    border-radius:12px;
-    transition:.3s;
-    background:#fff;
+.value-card {
+    height: 100%;
+    padding: 35px;
+    border: 1px solid #ececec;
+    border-radius: 12px;
+    transition: .3s;
+    background: #fff;
 }
 
-.value-card:hover{
-    transform:translateY(-5px);
-    box-shadow:0 15px 35px rgba(0,0,0,.08);
+.value-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .08);
 }
 
-.value-card h4{
-    color:var(--p);
-    font-weight:700;
-    margin-bottom:15px;
+.value-card h4 {
+    color: var(--p);
+    font-weight: 700;
+    margin-bottom: 15px;
 }
 
-.value-card p{
-    color:#666;
-    line-height:1.8;
+.value-card p {
+    color: #666;
+    line-height: 1.8;
 }
 
 .section-title {
-  color: var(--p);
+    color: var(--p);
 
 }
-h2{
+
+h2 {
     color: var(--p);
 }
 
 .story-image,
-.coffee-image{
-    width:100%;
-    max-width:520px;
-    height:380px;
-    object-fit:cover;
-    border-radius:10px;
+.coffee-image {
+    width: 100%;
+    max-width: 520px;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 10px;
 }
+
 /*==========================================
             COFFEE CARDS
 ==========================================*/
@@ -536,8 +542,8 @@ h2{
 
 
     /* HERO */
-    .hero{
-        min-height:100vh;
+    .hero {
+        min-height: 100vh;
         padding: 120px 20px 70px;
         background-position: center;
     }
@@ -548,6 +554,30 @@ h2{
         justify-content: center;
         align-items: center;
         text-align: center;
+    }
+
+    .hero-subtitle {
+        font-size: 12px;
+        letter-spacing: 4px;
+        line-height: 1.8;
+    }
+
+    .lavender-icon {
+        width: 22px;
+        height: auto;
+    }
+
+    .text-purple {
+        font-size: 54px;
+        line-height: 1.05;
+    }
+
+    .text-bold {
+        font-size: 18px;
+    }
+
+    .btn-purple {
+        padding: 12px 28px;
     }
 
     .taza-café {
@@ -567,7 +597,7 @@ h2{
     }
 
     .hero h1 {
-        font-size:clamp(2.8rem,7vw,5.5rem);
+        font-size: clamp(2.8rem, 7vw, 5.5rem);
         line-height: 1.08;
         margin-bottom: 20px;
         color: var(--text-purple);
