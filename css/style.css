@@ -1,6 +1,6 @@
 :root {
     /*744b7a*/
-    --p: #59256e;
+    --p: #774e80;
     --w: #fff;
     --text-purple: #c53fd6;
     --purple-dark: #c53fd6;
@@ -10,7 +10,7 @@
     --black-light: #1d1d1d;
     --text-gold: #ba9544;
     --text-gold-light: #f8b783;
-    --text-purple: #59256e;
+    --text-purple: #774e80;
 }
 
 * {
@@ -525,7 +525,7 @@ h2 {
         margin-top: 15px;
         padding: 20px;
         border-radius: 18px;
-        background: rgba(190, 112, 201, 0.5);
+        background: rgba(119, 78, 128, 0.5);
         backdrop-filter: blur(18px);
     }
 
