@@ -10,6 +10,7 @@
     --text-gold: #DFBC8B;
     --text-gold-dark: #C89B2B;
     --text-gold-light: #E2C3A1;
+    --gold-rgb: rgba(223, 188, 139);
     --text-purple: #8F7791;
     --p-rgba: rgba(143, 119, 145, 0.9);
 }
@@ -103,7 +104,6 @@ body {
 .overlay {
     position: absolute;
     inset: 0;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -114,11 +114,9 @@ body {
 /* AQUÍ SE APLICA LA OPACIDAD SOLO AL LOGO */
 .overlay::before {
     content: "";
-
     position: absolute;
     width: 350px;
     height: 350px;
-
     background-image: url("../icon/cupv1.svg");
     background-position: center;
     background-repeat: no-repeat;
@@ -513,6 +511,18 @@ h2 {
     border-color: rgba(111, 63, 214, .25);
 }
 
+.overlay::before {
+    width: 200px;
+    height: 200px;
+
+    top: 20px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background-size: contain;
+}
+
 /* Imagen */
 
 .coffee-card img {
@@ -845,7 +855,7 @@ h2 {
     .navbar-toggler:focus,
     .navbar-toggler:active,
     .navbar-toggler.show {
-        border-color: rgba(196, 63, 214, 0.9);
+        border-color: var(--gold-rgb);
         /* mismo o similar color, no negro */
         outline: none;
         box-shadow: none;
@@ -854,7 +864,7 @@ h2 {
 
     /* Color de las 3 líneas */
     .navbar-toggler-icon {
-        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(196, 63, 214, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2.5' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(223, 188, 139, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2.5' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
         background-repeat: no-repeat;
         background-position: center;
         background-size: 24px 24px;
@@ -880,7 +890,7 @@ h2 {
     .nav-link {
         padding: 12px 0;
         font-size: 1.05rem;
-        color: #fce7ff !important;
+        color: var(--text-gold) !important;
     }
 
     /* HERO */
