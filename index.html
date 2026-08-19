@@ -19,6 +19,10 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <style>
+       
+    </style>
 </head>
 
 <body>
@@ -38,17 +42,22 @@
             </button>
 
             <div class="collapse navbar-collapse nav-line" id="menu">
-                <ul class="navbar-nav ms-auto gap-3">
+                <ul class="navbar-nav ms-auto gap-3 align-items-lg-center">
+                    <li class="nav-item language-switch">
+                        <button type="button" id="btn-es" class="language-btn active" onclick="changeLanguage('es')">ES</button>
+                        <span class="language-separator">|</span>
+                        <button type="button" id="btn-en" class="language-btn" onclick="changeLanguage('en')">EN</button>
+                    </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
+                        <a class="nav-link" href="#home" data-es="Inicio" data-en="Home">Home</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#our-story">Our story</a>
+                        <a class="nav-link" href="#our-story" data-es="Nuestra historia" data-en="Our story">Our story</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
+                        <a class="nav-link" href="#about" data-es="Nosotros" data-en="About">About</a>
                     </li>
                     <!--    
                     <li class="nav-item">
@@ -56,7 +65,7 @@
                     </li>
 -->
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
+                        <a class="nav-link" href="#contact" data-es="Contacto" data-en="Contact">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -76,7 +85,7 @@
             <div class="container hero-content text-center">
                 <h5>
                     <img src="icon/lavanda.svg" alt="" class="lavender-icon lavender-right">
-                    <span class="hero-subtitle">SPECIALTY COFFEE</span>
+                    <span class="hero-subtitle" data-es="CAFÉ DE ESPECIALIDAD" data-en="SPECIALTY COFFEE">SPECIALTY COFFEE</span>
                     <img src="icon/lavanda.svg" alt="" class="lavender-icon">
 
                 </h5>
@@ -84,14 +93,14 @@
                     <span class="heart"></span>
                 </div>
                 <h1 class="text-purple">
-                    Each cup
+                    <span data-es="Cada taza tiene un propósito." data-en="Each cup has a purpose.">Each cup
                     <br class="text-purple">
-                    has a purpose.
+                    has a purpose.</span>
                 </h1>
-                <p class="text-bold">
+                <p class="text-bold" data-es="Todo lo que hacemos está hecho con amor." data-en="Everything we do is done with love.">
                     Everything we do is done with love.
                 </p>
-                <a href="#our-story" class="btn btn-purple">
+                <a href="#our-story" class="btn btn-purple" data-es="Nuestra historia" data-en="Our story">
                     Our story
                 </a>
             </div>
@@ -107,22 +116,32 @@
 
             <!-- Section heading -->
             <div class="text-center history-header mb-5">
-                <span class="section-tag">Our History</span>
+                <span class="section-tag" data-es="Nuestra historia" data-en="Our History">Our History</span>
 
-                <h2 class="section-title">
+                <h2 class="section-title" data-es="¿Por qué Purple?" data-en="Why Purple?">
                     Why Purple?
                 </h2>
+                <p class="history-intro" data-es="Purple Coffee nació de un momento de esperanza durante una de las temporadas más inciertas de la vida. Durante la pandemia, cuando el mundo se sentía especialmente difícil, mi fe se convirtió en una fuente de fortaleza y consuelo. Un día, mientras escuchaba un mensaje de Dante Gebel, me conmovió profundamente el significado del color púrpura: un símbolo de dignidad, propósito, transformación y esperanza. En ese momento, nació en mi corazón un sueño: algún día, mi marca de café llevaría ese nombre. Purple Coffee honra ese comienzo mientras da la bienvenida a cada persona, sin importar su historia, origen o creencias. Es un lugar donde todos pueden sentirse valorados, encontrar conexión y disfrutar de una taza de café cuidadosamente preparada. Porque el púrpura es más que un color. Es un recordatorio de que cada vida tiene valor, cada historia importa y que incluso las temporadas difíciles pueden dar vida a algo hermoso." data-en="Purple Coffee was born from a moment of hope during one of life’s most uncertain seasons. During the pandemic, when the world felt especially difficult, my faith became a source of strength and comfort. One day, while listening to a message by Dante Gebel, I was deeply moved by the meaning of the color purple: a symbol of dignity, purpose, transformation, and hope. In that moment, a dream took root in my heart: one day, my coffee brand would carry that name. Purple Coffee honors that beginning while welcoming every person, regardless of their story, background, or beliefs. It is a place where everyone can feel valued, find connection, and enjoy a thoughtfully crafted cup of coffee. Because purple is more than a color. It is a reminder that every life has value, every story matters, and even difficult seasons can give birth to something beautiful.">
+                    Purple Coffee was born from a moment of hope during one of life’s most uncertain seasons.
 
-                <p class="history-intro">
-                    Born six years ago, Purple Coffee was inspired by a color
-                    with a story of faith, identity, and rarity.
+                    During the pandemic, when the world felt especially difficult, my faith became a source of strength
+                    and comfort. One day, while listening to a message by Dante Gebel, I was deeply moved by the meaning
+                    of the color purple a symbol of dignity, purpose, transformation, and hope. In that moment, a dream
+                    took root in my heart: one day, my coffee brand would carry that name.
+
+                    Purple Coffee honors that beginning while welcoming every person, regardless of their story,
+                    background, or beliefs. It is a place where everyone can feel valued, find connection, and enjoy a
+                    thoughtfully crafted cup of coffee.
+
+                    Because purple is more than a color. It is a reminder that every life has value, every story
+                    matters, and even difficult seasons can give birth to something beautiful.
                 </p>
             </div>
 
             <!-- History cards -->
             <div class="row g-4 justify-content-center">
 
-                <!-- FAITH -->
+                <!-- FAITH 
                 <div class="col-md-6 col-lg-4">
                     <div class="history-card text-center">
 
@@ -145,7 +164,7 @@
                     </div>
                 </div>
 
-                <!-- IDENTITY -->
+             
                 <div class="col-md-6 col-lg-4">
                     <div class="history-card text-center">
 
@@ -170,7 +189,7 @@
                     </div>
                 </div>
 
-                <!-- LEGACY -->
+             
                 <div class="col-md-6 col-lg-4">
                     <div class="history-card text-center">
 
@@ -196,7 +215,7 @@
                 </div>
 
             </div>
-
+            -->
             <!-- Closing statement -->
             <div class="history-closing text-center">
 
@@ -204,14 +223,14 @@
                     <span>♡</span>
                 </div>
 
-                <span class="history-years">
+                <span class="history-years" data-es="6 AÑOS • UN PROPÓSITO" data-en="6 YEARS • ONE PURPOSE">
                     6 YEARS • ONE PURPOSE
                 </span>
 
                 <h3>
-                    Purple is more than a color.
+                    <span data-es="Purple es más que un color." data-en="Purple is more than a color.">Purple is more than a color.</span>
                     <br>
-                    <em>It is our story.</em>
+                    <em data-es="Es nuestra historia." data-en="It is our story.">It is our story.</em>
                 </h3>
 
             </div>
@@ -227,16 +246,15 @@
             <div class="row align-items-center gy-5">
                 <div class="col-lg-6 subtitle-abouts">
                     <span class="section-subtitle">
-                        Mision
+                        <h2 class="section-title" data-es="Misión" data-en="Mission">
+                            Mision
+                        </h2>
                     </span>
-                    <h2 class="section-title">
-                        To create a space where specialty coffee
-                        <br>
-                        and a love for people come together.
-                    </h2>
-                    <p>
-                        Through exceptional service, genuine conversations, and small acts of kindness, we seek to
-                        remind every customer that they have value and hope.
+                    <p data-es="En Purple Coffee, creamos experiencias significativas a través del café de especialidad. Cada bebida se prepara con excelencia, pasión y atención al detalle, creando un espacio acogedor donde las personas se sienten valoradas y conectadas. Más que servir café, buscamos compartir esperanza, amor y propósito en cada taza." data-en="At Purple Coffee, we create meaningful experiences through specialty coffee. Every beverage is crafted with excellence, passion, and attention to detail, while creating a welcoming space where people feel valued and connected. More than serving coffee, we seek to share hope, love, and purpose in every cup.">
+                        At Purple Coffee, we create meaningful experiences through specialty coffee. Every beverage is
+                        crafted with excellence, passion, and attention to detail, while creating a welcoming space
+                        where people feel valued and connected. More than serving coffee, we seek to share hope, love,
+                        and purpose in every cup.
                     </p>
                     <!----<a href="#menu-section" class="btn btn-purple">
                         Explore our menu
@@ -258,26 +276,15 @@
                 </div>
 
                 <div class="col-lg-6 order-1 order-lg-2">
-
-                    <span class="section-tag">Vision</span>
-
-                    <h2 class="section-title">
-                        To become a specialty coffee shop recognized for exceptional quality,
-                        genuine hospitality, and meaningful experiences.
+                    <h2 class="section-title" data-es="Visión" data-en="Vision">
+                        Vision
                     </h2>
-
-                    <p class="section-text">
-                        We strive to serve the highest quality specialty coffee, prepared with
-                        excellence, passion, and attention to every detail.
+                    <p class="section-text" data-es="Convertirnos en una marca de café de especialidad reconocida por su calidad, excelencia y propósito. Aspiramos a construir una comunidad que inspire conexión, esperanza y transformación, creciendo desde Nueva York hacia nuevas ciudades mientras permanecemos fieles a nuestra esencia: servir con amor, honrar cada historia y recordar a las personas que sus vidas tienen valor y propósito." data-en="To become a specialty coffee brand recognized for its quality, excellence, and purpose. We aspire to build a community that inspires connection, hope, and transformation, growing from New York into new cities while remaining true to our essence: serving with love, honoring every story, and reminding people that their lives have value and purpose.">
+                        To become a specialty coffee brand recognized for its quality, excellence, and purpose. We
+                        aspire to build a community that inspires connection, hope, and transformation, growing from New
+                        York into new cities while remaining true to our essence: serving with love, honoring every
+                        story, and reminding people that their lives have value and purpose.
                     </p>
-
-                    <p class="section-text">
-                        Beyond coffee, we aspire to build a community where every guest finds
-                        hope, connection, and peace while experiencing God's love through every
-                        interaction. Our desire is to positively impact every city where
-                        purple coffee is present.
-                    </p>
-
                 </div>
 
             </div>
@@ -288,50 +295,50 @@
         <div class="container">
 
             <div class="text-center mb-5">
-                <span class="section-tag">Our Values</span>
-                <h2 class="section-title">What We Stand For</h2>
+                <span class="section-tag" data-es="Nuestros valores" data-en="Our Values">Our Values</span>
+                <h2 class="section-title" data-es="En lo que creemos" data-en="What We Stand For">What We Stand For</h2>
             </div>
 
             <div class="row g-4">
 
                 <div class="col-md-6 col-lg-4">
                     <div class="value-card">
-                        <h4>Love</h4>
-                        <p>We serve every person with respect, compassion, and genuine care.</p>
+                        <h4 data-es="Amor" data-en="Love">Love</h4>
+                        <p data-es="Servimos a cada persona con amabilidad, respeto y atención genuina." data-en="We serve every person with kindness, respect, and genuine care">We serve every person with kindness, respect, and genuine care</p>
                     </div>
                 </div>
 
                 <div class="col-md-6 col-lg-4">
                     <div class="value-card">
-                        <h4>Excellence</h4>
-                        <p>We pursue quality in every cup and every detail.</p>
+                        <h4 data-es="Excelencia" data-en="Excellence">Excellence</h4>
+                        <p data-es="Estamos comprometidos con la calidad: desde el café que seleccionamos hasta cada taza que preparamos y cada detalle que creamos." data-en="We are committed to quality—from the coffee we select to every cup we craft and every detail we create.">We are committed to quality—from the coffee we select to every cup we craft and every detail we create.</p>
                     </div>
                 </div>
 
                 <div class="col-md-6 col-lg-4">
                     <div class="value-card">
-                        <h4>Integrity</h4>
-                        <p>We do what is right, even when no one is watching.</p>
+                        <h4 data-es="Integridad" data-en="Integrity">Integrity</h4>
+                        <p data-es="Elegimos la honestidad, la responsabilidad y la autenticidad en todo lo que hacemos." data-en="We choose honesty, responsibility, and authenticity in everything we do.">We choose honesty, responsibility, and authenticity in everything we do.</p>
                     </div>
                 </div>
 
                 <div class="col-md-6 col-lg-4">
                     <div class="value-card">
-                        <h4>Hospitality</h4>
-                        <p>Every guest is welcomed as someone truly special.</p>
+                        <h4 data-es="Hospitalidad" data-en="Hospitality">Hospitality</h4>
+                        <p data-es="Creemos en un espacio acogedor donde cada visitante se sienta visto, valorado y como en casa." data-en="We create a welcoming space where every guest feels seen, valued, and at home.">We create a welcoming space where every guest feels seen, valued, and at home.</p>
                     </div>
                 </div>
 
                 <div class="col-md-6 col-lg-4">
                     <div class="value-card">
-                        <h4>Purpose</h4>
-                        <p>We believe every person was created with a unique purpose.</p>
+                        <h4 data-es="Propósito" data-en="Purpose">Purpose</h4>
+                        <p data-es="Creemos que cada taza puede crear un momento significativo y que cada persona tiene una historia que merece ser honrada." data-en="WWe believe every cup can create a meaningful moment and every person has a story worth honoring.">WWe believe every cup can create a meaningful moment and every person has a story worth honoring.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4">
                     <div class="value-card">
-                        <h4>Generosity</h4>
-                        <p>We share hope, time, and opportunities with our community.</p>
+                        <h4 data-es="Conexión" data-en="Connection">Connection</h4>
+                        <p data-es="Unimos a las personas a través del café, la conversación y un sentido compartido de pertenencia." data-en="We bring people together through coffee, conversation, and a shared sense of belonging.">We bring people together through coffee, conversation, and a shared sense of belonging.</p>
                     </div>
                 </div>
 
@@ -347,11 +354,11 @@
     <section class="features py-5">
         <div class="container">
             <div class="text-center mb-5">
-                <span class="section-subtitle">
-                    WHY CHOOSE US
+                <span class="section-subtitle" data-es="Lo que hace especial a Purple Coffee" data-en="What makes Purple Coffee special">
+                    What makes purple coffee special
                 </span>
 
-                <h2>
+                <h2 data-es="Hecho para los amantes del café" data-en="Made for coffee lovers">
                     Made for coffee lovers
                 </h2>
             </div>
@@ -367,10 +374,10 @@
                         </div>
 
                         <div class="feature-content">
-                            <h4>Premium Beans</h4>
+                            <h4 data-es="Seleccionado cuidadosamente" data-en="Thoughtfully selected">Thoughtfully selected</h4>
 
                             <p>
-                                Carefully selected beans from the finest coffee farms.
+                                Quality coffee chosen with intention, care, and respect for every detail.
                             </p>
                         </div>
 
@@ -387,10 +394,10 @@
                         </div>
 
                         <div class="feature-content">
-                            <h4>Expert Baristas</h4>
+                            <h4 data-es="Elaborado con cuidado" data-en="Crafted with care">Crafted with care</h4>
 
                             <p>
-                                Coffee prepared by passionate professionals.
+                                Every beverage is thoughtfully prepared to create a memorable coffee experience.
                             </p>
                         </div>
 
@@ -403,14 +410,14 @@
                     <div class="feature-card">
 
                         <div class="feature-image">
-                            <img src="img/Con_amor.png" alt="Coffee made with love">
+                            <img src="img/purple_nature.png" alt="Coffee made with love">
                         </div>
 
                         <div class="feature-content">
-                            <h4>Made With Love</h4>
+                            <h4 data-es="Café con propósito" data-en="Coffee with purpose">Coffee with purpose</h4>
 
                             <p>
-                                Every cup is served with dedication and care.
+                                More than coffee, we create moments of connection, warmth, and meaning.
                             </p>
                         </div>
 
@@ -537,7 +544,7 @@
 
                 </a>
 
-                <!-- Facebook / X -->
+                <!-- Facebook / X 
                 <a href="https://www.facebook.com/purplecoffeeyes/" target="_blank" rel="noopener noreferrer">
 
                     <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
@@ -546,8 +553,8 @@
                     </svg>
 
                 </a>
-
-                <!-- WhatsApp -->
+                -->
+                <!-- WhatsApp 
                 <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">
 
                     <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
@@ -556,7 +563,7 @@
                     </svg>
 
                 </a>
-
+                -->
             </div>
 
         </div>
@@ -565,16 +572,32 @@
         <!-- FOOTER BOTTOM -->
         <div class="footer-bottom">
 
-            <p>© 2026 Purple Coffee. All rights reserved.</p>
+            <p data-es="© 2026 Purple Coffee. Todos los derechos reservados." data-en="© 2026 Purple Coffee. All rights reserved.">© 2026 Purple Coffee. All rights reserved.</p>
 
             <span class="footer-heart">♡</span>
 
-            <p>Made with love, served with purpose.</p>
+            <p data-es="Hecho con amor, servido con propósito." data-en="Made with love, served with purpose.">Made with love, served with purpose.</p>
 
         </div>
 
     </footer>
 
+
+    <script>
+        function changeLanguage(language) {
+            document.documentElement.lang = language;
+
+            document.querySelectorAll("[data-es][data-en]").forEach(function (element) {
+                element.textContent = element.getAttribute("data-" + language);
+            });
+
+            document.getElementById("btn-es").classList.toggle("active", language === "es");
+            document.getElementById("btn-en").classList.toggle("active", language === "en");
+        }
+
+        // English is the default language of the current page.
+        changeLanguage("en");
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
