@@ -85,32 +85,51 @@ body {
     transition: .3s
 }
 
+/* Selector reforzado para el contenedor */
 .language-switch {
     display: flex;
     align-items: center;
     gap: 2px;
     padding: 4px 8px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.18) !important;
+    border-radius: 20px !important;
+    background: rgba(255, 255, 255, 0.06) !important;
 }
 
+/* Selector reforzado para los botones */
+button.language-btn,
 .language-btn {
     position: relative;
-    border: none;
-    background: transparent;
+    appearance: none;
+    -webkit-appearance: none;
+    border: none !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    outline: none !important;
+    box-shadow: none !important;
     padding: 5px 7px;
     font: inherit;
     font-size: 0.78rem;
     font-weight: 500;
     letter-spacing: 0.5px;
-    color: #f1dfc1;
+    color: #f1dfc1 !important;
     cursor: pointer;
     opacity: 0.5;
     transition: all 0.3s ease;
 }
 
-/* Línea debajo del idioma activo */
+/* Estado Hover y Activo */
+button.language-btn:hover,
+.language-btn:hover {
+    opacity: 0.85;
+}
+
+button.language-btn.active,
+.language-btn.active {
+    opacity: 1;
+}
+
+/* Línea inferior del idioma activo */
 .language-btn::after {
     content: "";
     position: absolute;
@@ -121,14 +140,6 @@ body {
     background: #f1dfc1;
     transform: scaleX(0);
     transition: transform 0.3s ease;
-}
-
-.language-btn:hover {
-    opacity: 0.85;
-}
-
-.language-btn.active {
-    opacity: 1;
 }
 
 .language-btn.active::after {
